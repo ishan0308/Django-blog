@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body class="container bg-warning mx-3 mt-4">
+    <h1>All Blogs</h1>
+    
+    {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.timestamp }}</p>
+    <p>{{ post.body }}</p>
+    <hr>
+    {% endfor %}
+    <form action="/blog/">
+        <button class="btn btn-grey">Write more blogs</button>
+    </form>
+</body>
+</html>
